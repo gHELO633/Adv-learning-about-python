@@ -46,7 +46,7 @@ while True:
                 print("• What is Python Programming?")
                 print("  - Python is a widely-used programming language that was")
                 print("    created by Guido van Rossum in 1991.")
-                print("  - A dutch software engineer best known for creating the")
+                print("  - A Dutch software engineer best known for creating the")
                 print("    Python programming language in 1991.")
                 print("  - Designed to make programming simple, readable, and easy")
                 print("    to learn while remaining powerful enough for professional")
@@ -308,21 +308,11 @@ while True:
                 print("\n==========================================================")
                 print("YOU HAVE FINISHED THE PRELIM MODULE!")
                 print("==========================================================")
-                print("  [1] Proceed to Midterm Module")
-                print("  [2] Take the 20-Item Comprehensive Quiz Now")
-                print("  [3] Return to Main Menu")
-                step_p5 = input("Select (1-3): ").strip()
+                print("  [1] Return to Main Menu (then choose Midterm or Quiz)")
+                input("Press Enter to return to Main Menu...")
+                break
 
-                if step_p5 == "1":
-                    main_menu_choice = "2"
-                    break
-                elif step_p5 == "2":
-                    main_menu_choice = "4"
-                    break
-                else:
-                    break
-
-    if main_menu_choice == "2":
+    elif main_menu_choice == "2":
         midterm_page = 1
 
         while True:
@@ -492,21 +482,10 @@ while True:
                 print("\n==========================================================")
                 print("YOU HAVE FINISHED THE MIDTERM MODULE!")
                 print("==========================================================")
-                print("  [1] Proceed to Finals Module")
-                print("  [2] Take the 20-Item Comprehensive Quiz Now")
-                print("  [3] Return to Main Menu")
-                step_m3 = input("Select (1-3): ").strip()
+                input("Press Enter to return to Main Menu...")
+                break
 
-                if step_m3 == "1":
-                    main_menu_choice = "3"
-                    break
-                elif step_m3 == "2":
-                    main_menu_choice = "4"
-                    break
-                else:
-                    break
-
-    if main_menu_choice == "3":
+    elif main_menu_choice == "3":
         finals_page = 1
 
         while True:
@@ -586,137 +565,129 @@ while True:
                 print("\n==========================================================")
                 print("YOU HAVE FINISHED ALL LESSONS (PRELIM, MIDTERM & FINALS)!")
                 print("==========================================================")
-                take_quiz_now = input("Do you want to take the 20-Item Comprehensive Quiz now? (yes/no): ").strip().lower()
+                input("Press Enter to return to Main Menu...")
+                break
 
-                if take_quiz_now == "yes" or take_quiz_now == "y":
-                    main_menu_choice = "4"
-                    break
-                else:
-                    print("Okay! Returning to Main Menu. You can take the quiz anytime via Option [4].")
-                    break
+    elif main_menu_choice == "4":
+        print("\n==========================================================")
+        print("      COMPREHENSIVE PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
+        print("==========================================================")
+        print("Instructions: Type the letter of your choice (a, b, or c).")
+        print("----------------------------------------------------------")
 
-    if main_menu_choice == "4":
-        while True:
-            print("\n==========================================================")
-            print("      COMPREHENSIVE PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
-            print("==========================================================")
-            print("Instructions: Type the letter of your choice (a, b, or c).")
-            print("----------------------------------------------------------")
+        quiz_score = 0
 
-            quiz_score = 0
+        print("\n1. Who created the Python programming language in 1991?")
+        print("   a) James Gosling   b) Guido van Rossum   c) Bjarne Stroustrup")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n1. Who created the Python programming language in 1991?")
-            print("   a) James Gosling   b) Guido van Rossum   c) Bjarne Stroustrup")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n2. Which programming language is described as 'The language of the web; adds interactivity to websites'?")
+        print("   a) JavaScript   b) C++   c) Ruby")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n2. Which programming language is described as 'The language of the web; adds interactivity to websites'?")
-            print("   a) JavaScript   b) C++   c) Ruby")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n3. Why does print(Name) cause an error if the variable was created as name = \"John\"?")
+        print("   a) Missing quotes   b) Python is case-sensitive   c) Wrong indentation")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n3. Why does print(Name) cause an error if the variable was created as name = \"John\"?")
-            print("   a) Missing quotes   b) Python is case-sensitive   c) Wrong indentation")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n4. Which symbol is used to start a single-line comment in Python?")
+        print("   a) //   b) /*   c) #")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n4. Which symbol is used to start a single-line comment in Python?")
-            print("   a) //   b) /*   c) #")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n5. Which of the following is a VALID variable name in Python?")
+        print("   a) 1stValue   b) _speed   c) space name")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n5. Which of the following is a VALID variable name in Python?")
-            print("   a) 1stValue   b) _speed   c) space name")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n6. What is the data type of the value 89.5?")
+        print("   a) int   b) str   c) float")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n6. What is the data type of the value 89.5?")
-            print("   a) int   b) str   c) float")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n7. What is the result of the floor division expression 17 // 3?")
+        print("   a) 5   b) 5.66   c) 2")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n7. What is the result of the floor division expression 17 // 3?")
-            print("   a) 5   b) 5.66   c) 2")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n8. According to PEMDAS, which operation is evaluated FIRST in Python?")
+        print("   a) Multiplication   b) Addition   c) Parentheses")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n8. According to PEMDAS, which operation is evaluated FIRST in Python?")
-            print("   a) Multiplication   b) Addition   c) Parentheses")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n9. What type of value do relational operators (==, !=, >, <, >=, <=) always return?")
+        print("   a) Integer   b) String   c) True or False")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n9. What type of value do relational operators (==, !=, >, <, >=, <=) always return?")
-            print("   a) Integer   b) String   c) True or False")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n10. In an if-elif-else structure, what happens if multiple conditions are True?")
+        print("   a) Only the FIRST True block runs   b) All True blocks run   c) The else block runs")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n10. In an if-elif-else structure, what happens if multiple conditions are True?")
-            print("   a) Only the FIRST True block runs   b) All True blocks run   c) The else block runs")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n11. When is the inner condition inside a nested 'if' statement checked?")
+        print("   a) Always   b) Only if the outer condition is True   c) Only if the outer condition is False")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n11. When is the inner condition inside a nested 'if' statement checked?")
-            print("   a) Always   b) Only if the outer condition is True   c) Only if the outer condition is False")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n12. Which logical operator returns True ONLY when ALL conditions are True?")
+        print("   a) or   b) not   c) and")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n12. Which logical operator returns True ONLY when ALL conditions are True?")
-            print("   a) or   b) not   c) and")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n13. What is the result of: True or False?")
+        print("   a) True   b) False   c) None")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n13. What is the result of: True or False?")
-            print("   a) True   b) False   c) None")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n14. If is_raining = False, what does 'not is_raining' evaluate to?")
+        print("   a) False   b) True   c) Error")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n14. If is_raining = False, what does 'not is_raining' evaluate to?")
-            print("   a) False   b) True   c) Error")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n15. In programming, what is each single repetition of a loop called?")
+        print("   a) iteration   b) indentation   c) concatenation")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n15. In programming, what is each single repetition of a loop called?")
-            print("   a) iteration   b) indentation   c) concatenation")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n16. Which loop is best used when the number of repetitions is already known?")
+        print("   a) while loop   b) for loop   c) if-else")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n16. Which loop is best used when the number of repetitions is already known?")
-            print("   a) while loop   b) for loop   c) if-else")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n17. What numbers are printed by: for number in range(1, 6): print(number)?")
+        print("   a) 1, 2, 3, 4, 5, 6   b) 0, 1, 2, 3, 4, 5   c) 1, 2, 3, 4, 5")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n17. What numbers are printed by: for number in range(1, 6): print(number)?")
-            print("   a) 1, 2, 3, 4, 5, 6   b) 0, 1, 2, 3, 4, 5   c) 1, 2, 3, 4, 5")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
+        print("\n18. What is the first number printed by: for number in range(5, 0, -1)?")
+        print("   a) 5   b) 0   c) -1")
+        if input("   Answer: ").strip().lower() == "a":
+            quiz_score += 1
 
-            print("\n18. What is the first number printed by: for number in range(5, 0, -1)?")
-            print("   a) 5   b) 0   c) -1")
-            if input("   Answer: ").strip().lower() == "a":
-                quiz_score += 1
+        print("\n19. In a while loop with 'count = 1' and 'while count <= 5:', at what value of count does the loop stop?")
+        print("   a) 5   b) 6   c) 0")
+        if input("   Answer: ").strip().lower() == "b":
+            quiz_score += 1
 
-            print("\n19. In a while loop with 'count = 1' and 'while count <= 5:', at what value of count does the loop stop?")
-            print("   a) 5   b) 6   c) 0")
-            if input("   Answer: ").strip().lower() == "b":
-                quiz_score += 1
+        print("\n20. Which keyword is used to immediately stop a 'while True' loop when the user enters 'X'?")
+        print("   a) stop   b) exit   c) break")
+        if input("   Answer: ").strip().lower() == "c":
+            quiz_score += 1
 
-            print("\n20. Which keyword is used to immediately stop a 'while True' loop when the user enters 'X'?")
-            print("   a) stop   b) exit   c) break")
-            if input("   Answer: ").strip().lower() == "c":
-                quiz_score += 1
-
-            print("\n==========================================================")
-            print(f"QUIZ COMPLETED! {learner_name}, your score is: {quiz_score} / 20")
-            if quiz_score == 20:
-                print("REMARKS: PERFECT SCORE! Outstanding mastery of all lessons!")
-            elif quiz_score >= 15:
-                print("REMARKS: PASSED WITH HONORS! Great job!")
-            elif quiz_score >= 12:
-                print("REMARKS: PASSED! Good understanding of the lessons.")
-            else:
-                print("REMARKS: NEEDS REVIEW. Go back to the modules and try again!")
-            print("==========================================================")
-            break
+        print("\n==========================================================")
+        print(f"QUIZ COMPLETED! {learner_name}, your score is: {quiz_score} / 20")
+        if quiz_score == 20:
+            print("REMARKS: PERFECT SCORE! Outstanding mastery of all lessons!")
+        elif quiz_score >= 15:
+            print("REMARKS: PASSED WITH HONORS! Great job!")
+        elif quiz_score >= 12:
+            print("REMARKS: PASSED! Good understanding of the lessons.")
+        else:
+            print("REMARKS: NEEDS REVIEW. Go back to the modules and try again!")
+        print("==========================================================")
 
     elif main_menu_choice == "5":
         print("\n==========================================================")
@@ -724,6 +695,5 @@ while True:
         print("==========================================================")
         break
 
-    elif main_menu_choice != "1" and main_menu_choice != "2" and main_menu_choice != "3" and main_menu_choice != "4":
+    else:
         print("\nInvalid choice! Please select an option from 1 to 5.")
-    
